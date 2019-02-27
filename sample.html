@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GGK CAREERS</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      
+      function validateForm() {
+        var email=document.LoginForm.email.value;  
+        var password=document.LoginForm.pass.value;  
+        if (email == "user" && password == "password") 
+        {
+          document.LoginForm.action = "user.html";
+          return true;
+        }
+        else if(email == "managerTA" && password == "password")
+        {
+          document.LoginForm.action = "managerTA.html";
+          return true;
+        }
+        else if(email == "juniorTA" && password == "password")
+        {
+          document.LoginForm.action = "JuniorTA.html";
+          return true;
+        }
+        else if(email == "management" && password == "password")
+        {
+          document.LoginForm.action = "management.html";
+          return true;
+        }
+        else if(email == "project_manager" && password == "password")
+        {
+          document.LoginForm.action = "project_manager.html";
+          return true;
+        }
+        else
+        {
+          alert("Error login");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body >
+    <div class="navbar">
+      <img src="logo.png" alt="ggk logo" width="" height="51">
+      <a href="index.html">Home</a>
+    </div>
+    <form class="login"  name="LoginForm"  onsubmit="validateForm()" action= "">
+      <input type="text" class="login-input" name="email" placeholder="Email Address" autofocus>
+      <input type="password" class="login-input" name="pass" placeholder="Password">
+      <input type="submit" value="Log In" class="login-button">
+      <p class="login-lost"><a href="forget_password.html">Forgot Password?</a></p>
+      <p class="login-lost"><a href="signUp.html">New User?</a></p>
+    </form>
+  </body>
